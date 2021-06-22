@@ -34,6 +34,7 @@ def getData():
 
     driver.implicitly_wait(5)
     print(html_source)
+    driver.get_screenshot_as_file('/screenshot.png') 
     username = driver.find_element_by_id('username')
     username.send_keys('enrique.alvarez.villace@gmail.com')
     print('User sent')
